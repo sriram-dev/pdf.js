@@ -681,6 +681,9 @@ var LinkAnnotation = (function LinkAnnotationClosure() {
       element.style.height = height + 'px';
 
       element.href = this.data.url || '';
+      if (element.href.length > 0) {
+        element.target = '_blank';
+      }
       return element;
     }
   });
